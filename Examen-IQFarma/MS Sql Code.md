@@ -63,7 +63,7 @@ insert into Usuario(Usuari, Contrasena, FechaIngreso, CodigoArea) values ('Jzapa
 
 
 --
-
+-- Correr Manual Mente
 DECLARE @colnameList varchar(200)
 select @colnameList =  COALESCE(@colnameList + ',','') + mes
 from  (select distinct DATENAME(MONTH, FechaIngreso) mes  from  Usuario) dt
